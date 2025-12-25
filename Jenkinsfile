@@ -19,8 +19,8 @@ pipeline {
         stage('Testing') {
             steps {
                 sh'''
-                npm test
-                npm run test:coverage
+                APP_PORT=5001 npm test
+                APP_PORT=5002 npm run test:coverage
                 '''
             }
         }
